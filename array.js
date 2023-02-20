@@ -157,23 +157,126 @@
 // Question 7. WAP to Find maximum sum of consecutive subarray of size k
 // ===========================+++++++++++++++++========================
 
-function maximumSumofConSubArray(arr,k){
-    let i=0, j=0;
-    let length=arr.length;
-    let sum=0;
-    let max=-99999999;
-    while(j<length){
-        sum +=arr[j]
-        if(j-i + 1==k){
-            max=Math.max(max,sum);
-            sum -=arr[i]
-            j++;
-            i++;
-        }
-        j++
-    }
-}
+// function maximumSumofConSubArray(arr,k){
+//     let i=0, j=0;
+//     let length=arr.length;
+//     let sum=0;
+//     let max=-99999999;
+//     while(j<length){
+//         sum +=arr[j]
+//         if(j-i + 1==k){
+//             max=Math.max(max,sum);
+//             sum -=arr[i]
+//             j++;
+//             i++;
+//         }
+//         j++
+//     }
+// }
+// ===========================+++++++++++++++++========================
+// Question 7. Two Sum
+// ===========================+++++++++++++++++========================
+// function twoSum(arr,target){
+//     let result=[];
+//     for(let i=0;i<arr.length;i++){
+//         for(let j=i+1;j<arr.length;j++){
+//             if(arr[i]+arr[j]==target){
+//                 result.push([i,j])
+//             }
+//         }
+//     }
+//     return result
+// }
+// let output=twoSum([1,5,2,3,2,1,4,6],5)
+// console.log(output)
 
+// ===========================+++++++++++++++++========================
+// Question 7. Three Sum
+// ===========================+++++++++++++++++========================
+
+// function threeSum(arr,target){
+//     let result=[]
+//     for(let i=0;i<arr.length;i++){
+//         for(let j=i+1;j<arr.length;j++){
+//             for(let k=j+1;k<arr.length;k++){
+//                 if(arr[i]+arr[j]+arr[k]==target){
+//                     result.push([i,j,k])
+//                 }
+//             }
+//         }
+//     }
+//     return result
+// }
+// let output=threeSum([1,5,2,3,2,1,4,6],5)
+// console.log(output)
+
+// ===========================+++++++++++++++++========================
+// Question 8. Least frequent element in an Array
+// ===========================+++++++++++++++++========================
+// function leastCount(arr){
+//     let min_freq=Number.POSITIVE_INFINITY;
+//     let least_count_number
+//     for(let i=0;i<arr.length;i++){
+//         let count=0
+//         for(let j=0;j<arr.length;j++){
+//             if(arr[i]==arr[j]){
+//                 count++
+//             }
+//         }
+//         if(min_freq>count){
+//             min_freq=Math.min(min_freq ,count)
+//             least_count_number=arr[i]
+//         }
+//     }
+//     return least_count_number
+//   }
+//   console.log(leastCount([1,2,1,3,2,1,3,7,5,5,65,65,29,29]))
+
+// ===========================+++++++++++++++++========================
+// Question 9. Most frequent element in an Array
+// ===========================+++++++++++++++++========================
+// function leastCount(arr){
+//     let max_freq=Number.NEGATIVE_INFINITY;
+//     let most_count_number
+//     for(let i=0;i<arr.length;i++){
+//         let count=0
+//         for(let j=0;j<arr.length;j++){
+//             if(arr[i]==arr[j]){
+//                 count++
+//             }
+//         }
+//         if(max_freq<count){
+//             max_freq=Math.max(max_freq ,count)
+//             most_count_number=arr[i]
+//         }
+//     }
+//     return most_count_number
+//   }
+//   console.log(leastCount([1,2,1,3,2,1,3,7,5,5,65,65,29,29,29,29]))
+
+// ===========================+++++++++++++++++========================
+// Question 9. Invert Key Value of Object
+// ===========================+++++++++++++++++========================
+// function invertkeyvalue(obj){
+//     let result={}
+//     for(let key in obj){
+//         result[obj[key]]=key
+//     }
+//     return result
+// }
+// console.log(invertkeyvalue({a:20,b:30,c:40,d:50}))
+
+// ===========================+++++++++++++++++========================
+// Question 10. Invert Key Value of Object
+// ===========================+++++++++++++++++========================
+// function invertkeyvalue(obj){
+//     let result={}
+//     for(let key in obj){
+//         result[obj[key]]=key
+//     }
+//     return result
+// }
+// console.log(invertkeyvalue({a:20,b:30,c:40,d:50}))
 
 
 // Missing Number
