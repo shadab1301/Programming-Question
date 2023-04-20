@@ -267,16 +267,48 @@
 // console.log(invertkeyvalue({a:20,b:30,c:40,d:50}))
 
 // ===========================+++++++++++++++++========================
-// Question 10. Invert Key Value of Object
+// Question 11. Generate random Number between two number
 // ===========================+++++++++++++++++========================
-// function invertkeyvalue(obj){
-//     let result={}
-//     for(let key in obj){
-//         result[obj[key]]=key
-//     }
-//     return result
+// function generateRandomNumberinBetween(n1,n2){
+    
+//     let random=(n1 + Math.random()*(n2-n1)).toFixed(0)
+//     return random
 // }
-// console.log(invertkeyvalue({a:20,b:30,c:40,d:50}))
+// console.log(generateRandomNumberinBetween(10,20))
+// ===========================+++++++++++++++++========================
+// Question 12. Object sorting
+// ===========================+++++++++++++++++========================
+let obj = {
+    "test1": {
+        "name": "sunil",
+        "age": 24
+    },
+    "test2": {
+        "name": "anil",
+        "age": 21
+    },
+    "test3": {
+        "name": "amit",
+        "age": 29
+    },
+    "test4": {
+        "name": "robin",
+        "age": 25
+    }
+}
+function objectSorting(obj){
+    let result={}
+    let sortedArr= Object.entries(obj).sort((a,b)=>{
+       return a[1].age - b[1].age 
+    })
+    for(let key of sortedArr){
+        result[key[0]]=key[1]
+    }
+    
+    return result
+}
+
+console.log(objectSorting(obj))
 
 
 // Missing Number
@@ -474,5 +506,4 @@
 //     return outPut
 // }
 // console.log(tagetSum([1,3,4,2,4,5,6,2]))
-
 
